@@ -12,7 +12,7 @@ const Home = () => {
 
    useEffect(() => {
      const renderData = async () => {
-       const url = `https://newsapi.org/v2/everything?q="all"&from=2025-04-02&to=2025-04-02&sortBy=popularity&apiKey=${
+       const url = `https://newsapi.org/v2/everything?q=all&from=2025-04-02&to=2025-04-02&sortBy=popularity&apiKey=${
          import.meta.env.VITE_API_KEY
        }`;
 
