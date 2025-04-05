@@ -5,11 +5,9 @@ import Card from "../card";
 
 const Blogs = ({
   data,
-  fakeData,
   loadingPage,
 }: {
   data: Article[];
-  fakeData: Article[];
   loadingPage: boolean;
   }) => {
   
@@ -59,11 +57,7 @@ const Blogs = ({
               }}
               className="text-3xl font-bold text-center mb-8 md:mb-12 transition duration-400 "
             >
-                {
-                  loadingPage ? (
-                     "Fake Data"
-                  ) :("Latest Articles")
-                }
+              {loadingPage ? "Fake Data" : "Latest Articles"}
             </h2>
             {filterData.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
@@ -72,10 +66,13 @@ const Blogs = ({
                 ))}
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-                {fakeData.map((post, index) => (
-                  <Card key={index} post={post} />
-                ))}
+              
+
+              <div className="flex flex-col justify-center items-center w-full min-h-[70vh] md:min-h-[50vh]">
+                <p className="text-xl font-medium text-center text-gray-400 my-8 ">
+                  Loading...
+                </p>
+                <div className="loader"></div>
               </div>
             )}
           </div>
