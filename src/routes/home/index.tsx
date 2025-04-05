@@ -187,7 +187,7 @@ const loadingPage = false;
       <Hero />
       <Blogs data={data} loadingPage={loadingPage}  />
       <Footer />
-      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-white shadow-[0_12px_30px_rgb(0,0,0,0.2)] hover:text-white p-3  rounded-full fixed bottom-10 right-10 z-50 hover:bg-blue-500 transition duration-100 ease-in-out">
+      <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-white shadow-[0_12px_30px_rgb(0,0,0,0.2)] hover:text-white p-3  rounded-full fixed bottom-5 right-5 md:bottom-10 md:right-10 z-50 hover:bg-blue-500 transition duration-100 ease-in-out">
         <ArrowUpFromDot />
       </button>
     </div>
